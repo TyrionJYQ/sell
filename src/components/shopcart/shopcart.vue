@@ -181,12 +181,16 @@ export default {
       if(this.totalPrice < this.minPrice) {
         return;
       }else {
-        window.alert('支付' + this.totalPrice + '元');
+        // window.alert('支付' + this.totalPrice + '元');
+        this.showTotalPrice()
       }
     },
     //小球动画
     addFood (target) {
       this.drop(target);
+    },
+    showTotalPrice() {
+      this.$swal('支付' + this.totalPrice + '元')
     }
   },
   computed: {
